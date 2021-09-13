@@ -25,4 +25,8 @@ class Post extends Model
      * @var string[]
      */
     protected $guarded = ['id'];
+
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
 }
