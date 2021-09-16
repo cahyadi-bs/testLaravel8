@@ -26,6 +26,13 @@ class Post extends Model
      */
     protected $guarded = ['id'];
 
+    /**
+     * The attributes that are included in query (with).
+     *
+     * @var string[]
+     */
+    protected $with = ['author','category'];
+
     public function category(){
         return $this->belongsTo(Category::class);
     }
