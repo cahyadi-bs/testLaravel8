@@ -15,11 +15,11 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function show(Category $category){
-        return view('posts',[
-            'title' => "Posts by Category: $category->name" ,
-            'active' => 'categories',
-            'posts' => $category->posts->load('category','author'),
-        ]);
-    }
+    // public function show(Category $category){
+    //     return view('posts',[
+    //         'title' => "Posts by Category: $category->name" ,
+    //         'active' => 'categories',
+    //         'posts' => $category->posts->load('category','author'),
+    //     ]);
+    // }
 }
